@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ubicomp.falldetector2.MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drop event"
+        android:id="@+id/drop_button"
+        android:width="180dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/analyse_button"
+        android:layout_alignStart="@+id/analyse_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="False event"
+        android:id="@+id/false_event_button"
+        android:width="180dp"
+        android:layout_below="@+id/drop_button"
+        android:layout_alignLeft="@+id/drop_button"
+        android:layout_alignStart="@+id/drop_button" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="Not detecting"
+        android:textOn="Detecting false positives"
+        android:id="@+id/false_button"
+        android:width="180dp"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/false_event_button"
+        android:layout_alignStart="@+id/false_event_button" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="Normal MODE"
+        android:textOn="Analyse MODE"
+        android:id="@+id/analyse_button"
+        android:layout_marginTop="46dp"
+        android:width="180dp"
+        android:layout_below="@+id/false_button"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Respond to events when prompted using these buttons"
+        android:id="@+id/textView"
+        android:layout_below="@+id/false_event_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Enable a training mode where each event is automatically tagged as &quot;not a drop event&quot; (a false positive)"
+        android:id="@+id/textView2"
+        android:layout_above="@+id/false_button"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Switch between normal mode (categorise events) and analyse mode (ML predictions)"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/analyse_button"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
